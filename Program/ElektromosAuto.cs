@@ -6,6 +6,6 @@ namespace Program
 {
     public class ElektromosAuto : Jarmu
     {
-
+        
     }
 }
