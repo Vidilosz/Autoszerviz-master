@@ -54,12 +54,12 @@ namespace Program
         }
         protected bool SzervizSzukseges => kilometerOra >= 200000;
 
-        public void InformaciotAd()
+        public virtual void InformaciotAd()
         {
             Console.WriteLine($"{rendszam}-{kor} éves a jármű, {kilometerOra} km-rel");
         }
 
-        public void Szervizel(int dij)
+        public virtual void Szervizel(int dij)
         {
             if (dij > 100000)
             {
