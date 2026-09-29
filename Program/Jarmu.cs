@@ -56,16 +56,16 @@ namespace Program
 
         public virtual void InformaciotAd()
         {
-            Console.WriteLine($"{rendszam}-{kor} éves a jármű, {kilometerOra} km-rel");
+            Console.WriteLine($"{Rendszam}-{Kor} éves a jármű, {KilometerOra} km-rel");
         }
 
         public virtual void Szervizel(int dij)
         {
             if (dij > 100000)
             {
-                kilometerOra -= 10000;
+                KilometerOra -= 10000;
             }
-            uzemanyagSzint -= 10;
+            UzemanyagSzint -= 10;
             Console.WriteLine("A jármű szervizelés megtörtént.");
         }
     }
