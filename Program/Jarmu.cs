@@ -10,8 +10,9 @@ namespace Program
         protected int kor;
         protected int kilometerOra;
         protected int uzemanyagSzint;
+        protected bool szervizSzukseges;
 
-        public Jarmu(string rendszam, int kor, int kilometerOra, int uzemanyagSzint, bool szervizSzukseges)
+        public Jarmu(string rendszam, int kor, int kilometerOra, int uzemanyagSzint)
         {
             Rendszam = rendszam;
             Kor = kor;
@@ -19,13 +20,13 @@ namespace Program
             UzemanyagSzint = uzemanyagSzint;
         }
 
-        protected string Rendszam
+        public string Rendszam
         {
             get => rendszam;
             set => rendszam = string.IsNullOrWhiteSpace(value) ? "ISMERETLEN" : value;
         }
 
-        protected int Kor
+        public int Kor
         {
             get => kor;
             set
@@ -36,13 +37,13 @@ namespace Program
             }
         }
 
-        protected int KilometerOra
+        public int KilometerOra
         {
             get => kilometerOra;
             set => kilometerOra = value < 0 ? 0 : value;
         }
 
-        protected int UzemanyagSzint
+        public int UzemanyagSzint
         {
             get => uzemanyagSzint;
             set
@@ -52,7 +53,7 @@ namespace Program
                 else uzemanyagSzint = value;
             }
         }
-        protected bool SzervizSzukseges => kilometerOra >= 200000;
+        public bool SzervizSzukseges => kilometerOra >= 200000;
 
         public virtual void InformaciotAd()
         {

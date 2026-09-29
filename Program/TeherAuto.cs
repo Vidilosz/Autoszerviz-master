@@ -8,7 +8,7 @@ namespace Program
     {
         private int rakomany;
 
-        public TeherAuto(string rendszam, int kor, int kilometerOra, int uzemanyagSzint, int rakomany) : base(rendszam, kor, kilometerOra, uzemanyagSzint, false)
+        public TeherAuto(string rendszam, int kor, int kilometerOra, int uzemanyagSzint, int rakomany) : base(rendszam, kor, kilometerOra, uzemanyagSzint)
         {
             Rakomany = rakomany;
         }
