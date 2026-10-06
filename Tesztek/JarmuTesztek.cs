@@ -199,5 +199,17 @@ namespace Tesztek
             Assert.That(auto.KilometerOra, Is.EqualTo(190000));
             Assert.That(auto.AkkumulatorSzint, Is.EqualTo(70));
         }
+
+        [Test]
+        public void SportAutoKorNovekedes()
+        {
+            int dij = 150000;
+
+            SportAuto sportAuto = new SportAuto("ABC-123", 5, 200000, 50,310);
+
+            sportAuto.Szervizel(dij);
+
+            Assert.That(sportAuto.Kor, Is.EqualTo(6));
+        }
     }
 }
